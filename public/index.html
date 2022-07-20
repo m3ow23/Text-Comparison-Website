@@ -3,16 +3,43 @@
     <head>
         <title>Text Comparison Website</title>
         <link rel="stylesheet" type="text/css" href="../CSS/index.css">
-        <script type = "text/javascript" src="../Javascript/LavenshteinAlgo.js"></script>
+        <script type = "text/javascript" src="../Javascript/StringCompareAlgo.js"></script>
     </head>
     <body>
         <header>
-            
+            <div>
+                <p>Text Comparison Detection</p>
+            </div>
         </header>
-        <main id="main">
-            <script>
-                lavenshteinAlgo();
-            </script>
+        <main>
+            <section>
+                <div class="original-text-container">
+                    <p>Original Text</p>
+                    <textarea id="original-text"></textarea>
+                </div>
+                <div class="button-container">
+                    <input type="button" value="Compare" onclick=submit()>
+                </div>
+                <div class="edited-text-container">
+                    <p>Edited Text</p>
+                    <textarea id="edited-text"></textarea>
+                </div>
+            </section>
+            <section class="result" id="result">
+
+            </section>
         </main>
+        <script>
+            function submit() {
+                console.log("called function submit");
+
+                document.getElementById("result").innerHTML = "";
+
+                let string1 = document.getElementById("original-text").value
+                let string2 = document.getElementById("edited-text").value
+
+                stringCompare(string1, string2);
+            }
+        </script>
     </body>
 </html>

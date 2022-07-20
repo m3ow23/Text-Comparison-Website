@@ -2,34 +2,10 @@
 <html>
     <body>
         <script>
-            let string1 = "test?!.,";
-
-            string1 = string1.replaceAll("?", " ?");
-            string1 = string1.replaceAll(".", " .");
-            string1 = string1.replaceAll(",", " ,");
-            string1 = string1.replaceAll("!", " !");
-
-            // for (i = 0; i < string1.length; i++) {
-            //     if (string1[i] == "?") {
-            //         console.log("true");
-            //         string1 = addStr(string1, i, " ?");
-            //         i += 2;
-            //     } else if (string1[i] == ",") {
-            //         console.log("true");
-            //         string1 = addStr(string1, i, " .");
-            //         i += 2;
-            //     } else if (string1[i] == ".") {
-            //         console.log("true");
-            //         string1 = addStr(string1, i, " ,");
-            //         i += 2;
-            //     } else if (string1[i] == "!") {
-            //         console.log("true");
-            //         string1 = addStr(string1, i, " !");
-            //         i += 2;
-            //     }
-            // }
+            let symbols = /[?.,!]/g;
+            let string1 = undefined;
             
-            console.log(string1);
+            console.log(string1, string1 != undefined ? string1.replace(/[?.,!]/g) : undefined, "");
 
             function addStr(str, index, stringToAdd){
                 return str.substring(0, index) + stringToAdd + str.substring(index, str.length);

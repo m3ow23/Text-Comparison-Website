@@ -64,15 +64,7 @@ function stringCompare(string1 = "", string2 = "") {
                 matrix[1][matrix_index] = str2[str2_index];
                 matrix_index++;
                 str1_index = str1_save;
-            } else if (str2_index == str2.length - 1 && (str1[str1_index] == undefined ? undefined : str1[str1_index].replace(/[?.,!:;]/g, "") != (str2[str2_index] == undefined ? undefined : str2[str2_index]))) {
-                console.log("last str2 index");
-
-                // marking deleted when already in last str2 index
-                for (; str1_save < str1_index; str1_save++, matrix_index++) { 
-                    matrix[0][matrix_index] = str1[str1_save];
-                    matrix[1][matrix_index] = null;
-                }
-            }else
+            } else
                 str1_index++;
             
         }
@@ -91,8 +83,4 @@ function stringCompare(string1 = "", string2 = "") {
             document.getElementById("result").innerHTML += "<p class=\"insert\">" + matrix[1][matrix_index] + "</p>";    
         document.getElementById("result").innerHTML += " ";
     }
-}
-
-function addStr(str, index, stringToAdd){
-    return str.substring(0, index) + stringToAdd + str.substring(index, str.length);
 }

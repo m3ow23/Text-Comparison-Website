@@ -87,6 +87,7 @@ header div p{
 
 /* Algortihm CSS */
 .result p{
+    font-family: sans-serif;
     font-size: 1.5em;
     word-wrap: break-word;
 }
